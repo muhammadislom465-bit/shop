@@ -1,0 +1,30 @@
+# Dependencies
+node_modules/
+*/node_modules/
+.pnp
+.pnp.js
+
+# Production / build
+dist/
+build/
+*.egg-info/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Database & local data
+*.sqlite3
+*.db
+backend/app/db/*.db
+
+# Environment variables & local configs
+.env.local
+.env.*.local
+.vscode/
+.idea/
+*.log
+
+# OS generated
+.DS_Store
+Thumbs.db
