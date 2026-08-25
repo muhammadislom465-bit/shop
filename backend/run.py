@@ -1,6 +1,9 @@
+import os
 import uvicorn
 
 if __name__ == "__main__":
-    print("FastAPI Backend Server ishga tushmoqda: http://127.0.0.1:8000")
-    print("API Documentation: http://127.0.0.1:8000/docs")
-    uvicorn.run("app.main:app", host="127.0.0.1", port=8000, reload=True)
+    port = int(os.environ.get("PORT", 8000))
+    host = os.environ.get("HOST", "0.0.0.0")
+    print(f"FastAPI Backend Server ishga tushmoqda: http://{host}:{port}")
+    print(f"API Documentation: http://{host}:{port}/docs")
+    uvicorn.run("app.main:app", host=host, port=port, reload=False)
