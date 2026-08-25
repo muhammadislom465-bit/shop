@@ -1,10 +1,8 @@
 from datetime import datetime, timedelta, timezone
 from typing import Optional, Any, Union
 from jose import jwt, JWTError
-from passlib.context import CryptContext
-from app.core.config import settings
-
 import bcrypt
+from app.core.config import settings
 
 def verify_password(plain_password: str, hashed_password: str) -> bool:
     try:
